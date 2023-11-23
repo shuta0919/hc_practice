@@ -33,7 +33,7 @@ month = options[:month] || Date.today.month
 
 if month < 1 || month > 12
   # 月が1から12の範囲外のエラーメッセージ
-  puts "#{month} is neither a month number (1..12) nor a name"
+  raise "#{month} is neither a month number (1..12) nor a name"
   exit
 end
 
