@@ -7,9 +7,9 @@ require 'optparse'
 def calendar(year, month)
   first_day = Date.new(year, month, 1)
   last_day = Date.new(year, month, -1)
-   
+
   puts "#{month}月 #{year}年".center(20)
-  puts "月 火 水 木 金 土 日"
+  puts '月 火 水 木 金 土 日'
 
   print '   ' * ((first_day.wday + 6) % 7)
 
@@ -24,7 +24,7 @@ end
 
 options = {}
 opt = OptionParser.new
-opt.on("-m month", Integer) { |m| options[:month] = m }
+opt.on('-m month', Integer) { |m| options[:month] = m }
 opt.parse!(ARGV)
 
 # now = Date.today
